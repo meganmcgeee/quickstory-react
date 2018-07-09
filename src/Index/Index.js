@@ -1,8 +1,7 @@
 import { Link, Router } from 'react-router-dom';
-import { Nav, NavItem } from 'react-bootstrap';
+import { NavLink, Route, Switch } from 'react-router-dom';
 import { darken, lighten } from 'polished';
 
-// import { LinkContainer } from 'react-router-bootstrap';
 import React from 'react';
 import VideoRecord from '../VideoRecord/VideoRecord';
 import styled from 'styled-components';
@@ -75,16 +74,47 @@ const StyledIndex = styled.div`
   }
 `;
 
+  const Navigation = () => (
+      <nav>
+        <ul>
+          <li><NavLink to='/'>Timeline</NavLink></li>
+          <li><NavLink to='/video'>Video</NavLink></li>
+          <li><NavLink to='/chat'>Chat</NavLink></li>
+        </ul>
+      </nav>
+    );
+        const Timeline = () => (
+          <div className='timeline'>
+            <div>
+              <img
+                src="http://www.ornaments.com.ua/wp-content/uploads/2014/08/Man%20silhouette%20HV.png"
+                alt="The Agent"
+              />
+              <h3>Instigate the Agent</h3>
+              <VideoRecord/>
+            </div>
+          </div>
+        );
+        
+    const Chat = () => (
+      <div className='chat'>
+        <h1>chat</h1>
+      </div>
+    );
+    
+const Main = () => (
+  <Switch>
+    <Route exact path='/' component={Timeline}></Route>
+    <Route exact path='/video' component={VideoRecord}></Route>
+    <Route exact path='/chat' component={Chat}></Route>
+  </Switch>
+);
+
+    
 const Index = () => (
   <StyledIndex>
-        <div>
-          <img
-            src="http://www.ornaments.com.ua/wp-content/uploads/2014/08/Man%20silhouette%20HV.png"
-            alt="The Agent"
-          />
-          <h3>Instigate the Agent</h3>
-          <VideoRecord/>
-        </div>
+      <Navigation />
+      <Main />
   </StyledIndex>
 );
 
