@@ -1,12 +1,12 @@
 {
-  "name": "react-multimedia-capture-example",
+  "name": "quickstory-react",
   "version": "1.0.0",
-  "description": "Example of using react-multimedia-capture",
+  "description": "quick story built in react",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "meganmcgeee <meganpmcgee@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel-preset-es2015": "^6.18.0",
@@ -17,7 +17,9 @@
     "gulp": "^3.9.1",
     "polished": "^1.9.3",
     "react-bootstrap": "^0.32.1",
+    "react-bot-ui": "^2.0.0",
     "react-dom": "^16.4.1",
+    "react-entypo": "^1.3.0",
     "react-multimedia-capture": "^1.0.1",
     "react-router-dom": "^4.3.1",
     "styled-components": "^3.3.3",
@@ -26,5 +28,6 @@
   },
   "devDependencies": {
     "react": "^16.4.1"
-  }
+  },
+  "repository": "https://github.com/MakeAppsIO/quickstory-react.git"
 }

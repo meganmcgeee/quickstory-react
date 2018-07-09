@@ -3,6 +3,7 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import { darken, lighten } from 'polished';
 
 import React from 'react';
+import ReactBotUI from '../ReactBotUI/ReactBotUI';
 import VideoRecord from '../VideoRecord/VideoRecord';
 import styled from 'styled-components';
 
@@ -91,22 +92,15 @@ const StyledIndex = styled.div`
                 alt="The Agent"
               />
               <h3>Instigate the Agent</h3>
-              <VideoRecord/>
             </div>
           </div>
         );
-        
-    const Chat = () => (
-      <div className='chat'>
-        <h1>chat</h1>
-      </div>
-    );
-    
+
 const Main = () => (
   <Switch>
     <Route exact path='/' component={Timeline}></Route>
     <Route exact path='/video' component={VideoRecord}></Route>
-    <Route exact path='/chat' component={Chat}></Route>
+    <Route exact path='/chat' component={ReactBotUI}></Route>
   </Switch>
 );
 
