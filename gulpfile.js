@@ -24,3 +24,9 @@ gulp.task('default', () => {
 	.pipe(buffer())
 	.pipe(gulp.dest('./build'));
 });
+
+gulp.task('sass', function () {
+	return gulp.src('css/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+		.pipe(sass())
+		.pipe(gulp.dest('app/css'))
+})

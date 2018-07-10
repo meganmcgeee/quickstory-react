@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Button from 'react-bootstrap/lib/Button';
+// import Button from 'react-bootstrap/lib/Button';
 import MediaCapturer from 'react-multimedia-capture';
 
 class VideoRecord extends React.Component {
