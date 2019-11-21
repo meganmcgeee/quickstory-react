@@ -1,5 +1,4 @@
 # Quickstory React
-Example of [react-multimedia-capture](https://github.com/rico345100/react-multimedia-capture).
 
 ## Steps
 1. install dependencies.
